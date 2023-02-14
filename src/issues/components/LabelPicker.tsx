@@ -7,9 +7,9 @@ const getLabelsAsync = async () => {
 }
 
 export const LabelPicker = () => {
-	const labelPicker = () => {
-		const labelsQuery = useQuery(['labels'], getLabelsAsync)
-	}
+	const labelsQuery = useQuery(['labels'], getLabelsAsync, {
+		refetchOnWindowFocus: false,
+	})
 
 	return (
 		<div>
