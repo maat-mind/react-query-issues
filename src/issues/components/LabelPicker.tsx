@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { githubApi } from '../../api/githubApi'
 
-const getLabelsAsync = async () => {
+const getLabelsAsync = async (): Promise<any[]> => {
 	const { data } = await githubApi.get('/labels')
 	return data
 }
