@@ -13,6 +13,7 @@ const getLabelsAsync = async (): Promise<Label[]> => {
 export const useLabels = () => {
 	const labelsQuery = useQuery(['labels'], getLabelsAsync, {
 		refetchOnWindowFocus: false,
+		staleTime: 1000 * 60 * 60,
 	})
 
 	return labelsQuery
